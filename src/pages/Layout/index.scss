@@ -1,37 +1,121 @@
-.ant-layout {
-  height: 100%;
+// .email-modal {
+//   .ant-modal-body {
+//     height: 150px;
+//   }
+// }
+// //登录modal
+// .login-modal {
+//   .ant-modal-body {
+//     height: 150px;
+//   }
+// }
+// //那个上侧头像底下的
+// .login-avatar {
+//   position: absolute;
+//   left: 989px;
+//   width: 40px;
+//   bottom: 12px;
+// }
+// //modal表单
+// // .ant-modal-body {
+// //   height: 150px;
+// //   color: rgba(85, 142, 155, 0.85);
+// // }
+// .ant-modal-body {
+//   color: rgba(85, 142, 155, 0.85);
+//   height: 450px;
+// }
+// .ant-layout-header {
+//   height: 64px;
+//   padding: 0 50px;
+//   color: rgba(0, 0, 0, 0.85);
+//   line-height: 64px;
+//   background: #2bb9c6;
+//   .ant-input {
+//     height: 40px;
+//     position: center;
+//   }
+// }
+// .ant-layout-sider-children {
+//   // height: 1000px;
+
+//   height: auto !important;
+//   margin-top: -0.1px;
+//   padding-top: 0.1px;
+//   color: rgb(42, 165, 56);
+//   background-color: white;
+//   width: 300px;
+// }
+// //注册modal大小
+// .btn1{
+//     left: 500px;
+//     color: #fff;
+//     border-color: #aad1ca;
+//     background: #15e1e1;
+//     text-shadow: 0 -1px 0 rgb(0 0 0 / 12%);
+//     box-shadow: 0 2px 0 rgb(0 0 0 / 5%);
+// }
+.regster-modal .ant-modal-body {
+  height: 200px;
+}
+//这里是按钮样式
+.ant-btn-primary {
+    
+    color: #fff;
+    border-color: #aad1ca;
+    background: #15e1e1;
+    text-shadow: 0 -1px 0 rgb(0 0 0 / 12%);
+    box-shadow: 0 2px 0 rgb(0 0 0 / 5%);
 }
 
-.header {
-  padding: 0;
+// //上传头像位置
+// .avater {
+//   box-sizing: border-box;
+//   margin: 0;
+//   padding: 0;
+//   color: rgba(0, 0, 0, 0.85);
+//   font-size: 14px;
+//   font-variant: tabular-nums;
+//   list-style: none;
+//   font-feature-settings: "tnum";
+//   line-height: 1.5715;
+//   position: relative;
+//   left: 300px;
+// }
+// .ant-layout-footer {
+//   height: 50px;
+// }
+// .ant-menu-title-content {
+//   color: rgba(141, 45, 186, 0.821);
+// }
+// .app-sidebar {
+//   border-right: 1px solid #ebedf0;
+//   height: calc(100vh - 64px - 40px);
+//   text-align: center;
+//   color: rgba(0, 0, 0, 0.65);
+//   overflow-y: auto;
+//   .sider-avatar {
+//     width: 132px;
+//     height: 132px;
+//     border-radius: 50%;
+//   }
+//   .title {
+//     font-size: 1.5em;
+//     font-weight: 700;
+//     margin-top: 10px;
+//   }
+//   .sub-title {
+//     font-size: 13px;
+//     margin-top: 5px;
+//     margin-bottom: 5px;
+//     color: rgba(0, 0, 0, 0.65);
+//   }
+.ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-item, .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-submenu {
+  margin-top: -1px;
+  margin-bottom: 0;
+  padding: 0 28px;
+}
+.header{
+  left: 500px;
 }
 
-.logo {
-  width: 200px;
-  height: 60px;
-  background: url('~@/assets/logo.png') no-repeat center / 160px auto;
-}
-
-.layout-content {
-  overflow-y: auto;
-}
-
-.user-info {
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding-right: 20px;
-  color: #fff;
-
-  .user-name {
-    margin-right: 20px;
-  }
-
-  .user-logout {
-    display: inline-block;
-    cursor: pointer;
-  }
-}
-.ant-layout-header {
-  padding: 0 !important;
-}

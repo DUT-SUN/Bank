@@ -1,0 +1,26 @@
+
+.Excel-contianer{
+    margin-left: 305px;
+    margin-top: 29px;
+    height: calc(100vh - 64px - 42px);
+    overflow: auto;
+    z-index: 99; 
+  }
+
+  .cardContext{
+    .ant-spin-nested-loading{
+        left: -5px !important;
+    }
+  }
+  .ant-spin-container {
+    position: relative;
+    transition: opacity .3s;
+    width: 1170px;
+}
+.ant-btn-primary {
+  color: #fff;
+  border-color: #aad1ca;
+  background: rgba(172, 105, 203, 0.821);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+}

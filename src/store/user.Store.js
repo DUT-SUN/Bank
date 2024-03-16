@@ -12,5 +12,4 @@ class UserStore {
     this.userInfo = res.data
   }
 }
-
-export default UserStore
+export default  UserStore

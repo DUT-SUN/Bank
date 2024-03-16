@@ -1,29 +1,79 @@
-import './index.scss'
-// 思路：
-// 1. 看官方文档 把echarts加入项目  
-// 如何在react获取dom -> useRef
-// 在什么地方获取dom节点 -> useEffect
-// 2. 不抽离定制化的参数 先把最小化的demo跑起来
-// 3. 按照需求，哪些参数需要自定义 抽象出来
+import React, { useEffect, useRef } from 'react'                                                       
+import * as echarts from 'echarts';                                                                  
+import 'zrender/lib/svg/svg';     
+import './index.scss'      
+import Bar from '@/components/Bar'  
+import { Card, Breadcrumb} from 'antd'
+import { Link, useLocation } from 'react-router-dom';
+import Analysis from '../analysis';
 
-import Bar from '@/components/Bar'
-const Home = () => {
+const Home = () => { 
+  const chartRef = useRef(null);
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const id = searchParams.get('id'); // 获取id查询参数
+  console.log(id)
+  useEffect(() => {
+    if (chartRef.current) {
+      var mychart = echarts.init(chartRef.current);
+      var option = {
+        title: {
+          text: '骗保总占比',
+          left: 'center'
+        },
+        tooltip: {
+          trigger: 'item'
+        },
+        legend: {
+          orient: 'vertical',
+          left: 'left',
+        },
+        series: [
+          {
+            name: '占比',
+            type: 'pie',
+            radius: '50%',
+            data: [
+              {value:12666, name: '正常人员'},
+              {value: 3335, name: '骗保人员'}
+            ],
+            emphasis: {
+              itemStyle: {
+                shadowBlur: 10,
+                shadowOffsetX: 0,
+                shadowColor: 'rgba(0, 0, 0, 0.5)'
+              }
+            },
+            color: [ '#7F7FFF','#FF7F7F']
+          }
+        ]
+      };
+      option && mychart.setOption(option);
+    }
+  }, []);
 
   return (
-    <div>
-      {/* 渲染Bar组件 */}
-      <Bar
-        title='主流框架满意度'
-        xData={['react', 'vue', 'angular']}
-        yData={[30, 40, 50]}
-        style={{ width: '500px', height: '400px' }} />
-      <Bar
-        title='主流框架使用度'
-        xData={['react', 'vue', 'angular']}
-        yData={[60, 70, 80]}
-        style={{ width: '300px', height: '200px' }} />
-    </div>
+    id?<Analysis id={id}/>:<>
+      <Card
+        title={
+          <Breadcrumb separator=">">                     
+            <Breadcrumb.Item>数据分析</Breadcrumb.Item>
+          </Breadcrumb>
+        }
+        style={{ marginBottom: 20,width:'1200px',position:'absolute',top:'93px' , height:'614px', left:'305px' }}
+      >
+        <div ref={chartRef} id='main' style={{position:'absolute',width:'600px',height:'400px',left:'600px',top:'190px',}}/>   
+        <div style={{ position:'absolute',left:'100px' ,bottom:'40px'}}>
+          {/* 渲染Bar组件 */}
+          <Bar
+            title='最近分析文件人数'
+            xData={['Affairs.csv', 'data.csv', 'Affairs.csv']}
+            yData={[5000, 15000, 10000]}
+            style={{ width: '500px', height: '400px' }} />
+        </div>
+      </Card>                                                                                 
+    </>                        
   )
 }
 
-export default Home
+export default Home;

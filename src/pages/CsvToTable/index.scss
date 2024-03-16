@@ -1,0 +1,17 @@
+
+
+.btn {
+  color: #fff;
+  border-color: #aad1ca;
+  background: -webkit-linear-gradient(0deg, rgb(168, 129, 225), rgb(104, 67, 96)) text;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+}
+.ant-btn-primary:focus, .ant-btn-primary:hover {
+  color: #1890ff;
+  border-color: #aad1ca;
+  background: -webkit-linear-gradient(0deg, rgb(168, 129, 225), rgb(104, 67, 96)) text;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+
+}

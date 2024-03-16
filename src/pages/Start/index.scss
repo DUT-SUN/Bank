@@ -1,0 +1,583 @@
+.ant-list-vertical .ant-list-item {
+  margin-left: 252.8px;
+  margin-top: 29px;
+  height: auto !important;
+  overflow: auto;
+  z-index: 99;
+}
+//列表样式上面
+.ant-layout-header {
+  height: 64px;
+  padding: 0 ;
+  color: rgba(0, 0, 0, 0.85);
+  line-height: 64px;
+  // background: #2bb9c6;
+  .ant-input {
+    height: 40px;
+    position: center;
+  }
+}
+.ant-spin-nested-loading {
+  position: relative;
+  width: 80%;
+}
+.my-table-row {
+  height: 5px;
+  line-height: 5px;
+}
+//table格子样式
+.ant-table {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgba(0,0,0,.85);
+  font-variant: tabular-nums;
+  line-height: 2;
+  list-style: none;
+  font-feature-settings: "tnum";
+  position: relative;
+  font-size: 16px;
+  background: #fff;
+  border-radius: 2px;
+}
+.ant-table-cell{
+  width: 200px;
+}
+//upload组件文字样式
+.ant-upload-list-item-name {
+  display: inline-block;
+  width: 100%;
+  padding-left: 22px;
+  overflow: hidden;
+  line-height: 1.5715;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  top:20px;
+}
+.ant-upload.ant-upload-drag {
+  position: absolute;
+  width: 78%;
+  height: 86%;
+  text-align: center;
+  background: #fafafa;
+  border: 1px dashed #d9d9d9;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: border-color .3s;
+  top: 70px;
+  left:16px
+}
+.ant-layout-sider-children {
+  // height: 1000px;
+  height: auto !important;
+  margin-top: -0.1px;
+  padding-top: 0.1px;
+  color: rgb(42, 165, 56);
+  background-color: white;
+  width: 300px;
+}
+
+
+.ant-menu-title-content {
+  color: rgba(141, 45, 186, 0.821);
+}
+.app-sidebar {
+  border-right: 1px solid #ebedf0;
+  height: calc(100vh - 64px - 40px);
+  text-align: center;
+  color: rgba(0, 0, 0, 0.65);
+  overflow-y: auto;
+  .sider-avatar {
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+  }
+  .title {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-top: 10px;
+  }
+  .sub-title {
+    font-size: 13px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: rgba(0, 0, 0, 0.65);
+  }
+
+  .home-pages {
+    padding: 0;
+    width: 214px;
+    line-height: 24px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    .homepage-icon {
+      width: 16px;
+      height: 16px;
+      font-size: 16px;
+    }
+    li {
+      padding: 0 8px;
+      cursor: pointer;
+      a {
+        vertical-align: top;
+        padding-left: 5px;
+        color: inherit;
+      }
+    }
+    li:hover {
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.95);
+    }
+  }
+}
+
+.title {
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 20%;
+  background-image: -webkit-linear-gradient(
+    left,
+    #e9a5a5,
+    #b8c1c0 10%,
+    #65c0e0 20%,
+    #aea2db 30%,
+    #81c1d9 40%,
+    #e9a5a5 50%,
+    #b8c1c0 60%,
+    #65c0e0 70%,
+    #aea2db 80%,
+    #81c1d9 90%,
+    #e9a5a5
+  );
+  color: transparent;
+
+  /* 将背景裁剪为文字 */
+  -webkit-background-clip: text;
+
+  /* 背景放大一倍，动画才有移动的空间 */
+  background-size: 50% 100%;
+
+  /* 动画 规定四秒执行完 无限循环 匀速播放 */
+  animation: a 5s infinite linear;
+}
+
+@keyframes a {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+.message {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  text-align: center;
+}
+
+.ant-modal-header {
+  background:#98cffb;
+}
+
+.ant-btn-primary {
+  color: #fff;
+  border-color: #aad1ca;
+  background: #15e1e1;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+}
+
+
+
+
+//分离!!!!!!!!!!!!!!!!!!!!!!!!!
+
+.app-home {
+  min-height: 10vh;
+  padding-bottom: 40px;
+  width: 292px;
+  color: rgba(85, 142, 155, 0.85);
+  .app-home-list {
+    width: calc(100%);
+
+    &-item {
+      position: relative;
+      border: 1px solid #ebedf0;
+      padding: 16px 24px;
+      margin-bottom: 10px;
+      transition: all 0.2s linear;
+      &:hover {
+        background: #effbff;
+        box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.1);
+        transform: translate3d(0, -5px 0);
+      }
+      .title {
+        color: #394d69;
+        font-size: 1.4rem;
+        font-weight: 600;
+        line-height: 1.2;
+        cursor: pointer;
+        &:hover {
+          color: #48b2ff;
+        }
+      }
+      .posted-time {
+        font-size: 0.5em;
+        padding-left: 20px;
+      }
+      .content {
+        cursor: pointer;
+        max-height: 260px;
+        overflow: hidden;
+      }
+      .list-item-others {
+        vertical-align: middle;
+        margin-top: 10px;
+        color: rgba(0, 0, 0, 0.45);
+        a {
+          color: inherit;
+        }
+      }
+    }
+  }
+
+  .preview {
+    position: fixed;
+    width: 260px;
+    height: 400px;
+    overflow: hidden;
+    top: 90px;
+    right: 20px;
+    list-style-type: circle;
+    .title {
+      color: #394d69;
+      font-size: 22px;
+    }
+    li {
+      cursor: pointer;
+      a {
+        color: #8590a6;
+        display: block;
+      }
+      // padding-left: 16px;
+      display: block;
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-left: -1px;
+
+      &:hover {
+        background: #f0f2f5;
+        a {
+          color: #40a9ff;
+        }
+      }
+    }
+  }
+
+  .github {
+    position: fixed;
+    width: 260px;
+    top: 490px;
+    right: 40px;
+    list-style-type: circle;
+    .title {
+      color: #394d69;
+      font-size: 22px;
+    }
+    li {
+      cursor: pointer;
+      a {
+        color: #8590a6;
+        display: block;
+      }
+      // padding-left: 16px;
+      display: block;
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-left: -1px;
+
+      &:hover {
+        background: #f0f2f5;
+        a {
+          color: #40a9ff;
+        }
+      }
+    }
+  }
+
+  .ant-drawer-body {
+    padding: 0;
+    width: 256px;
+    height: 100%;
+    .preview {
+      position: static;
+      margin: 0;
+      margin-top: 10px;
+      li {
+        padding-left: 20px;
+        a {
+          line-height: 26px;
+        }
+      }
+    }
+  }
+
+  .drawer-btn {
+    position: fixed;
+    width: 41px;
+    height: 41px;
+    top: 20vh;
+    right: 0;
+    cursor: pointer;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+    border-radius: 4px 0 0 4px;
+    text-align: center;
+    line-height: 41px;
+    z-index: 999;
+    background: #fff;
+  }
+
+  .no-data {
+    margin-top: 24%;
+    .keyword {
+      font-size: 18px;
+      font-weight: bold;
+      color: #f00;
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .app-home {
+    .app-home-list {
+      width: 100%;
+    }
+    .app-pagination {
+      margin-right: 0;
+    }
+  }
+}
+
+.button-content-right {
+  width: 80px;
+  height: 30px;
+  background-color: #b2de34;
+  font-size: small;
+  line-height: 30px;
+  text-align: center;
+  position: relative;
+  top: 15px;
+  left: -15px;
+  z-index: 3;
+}
+.button-content-right:before {
+  content: "";
+  width: 10px;
+  height: 0%;
+  border: 15px solid;
+  border-color: transparent #58661c transparent transparent;
+  border-top: 0;
+  left: -15px;
+  position: absolute;
+  top: 30px;
+  z-index: 1;
+}
+.button-content-right:after {
+  content: "";
+  width: 20px;
+  height: 0%;
+  border: 15px solid;
+  border-color: transparent transparent transparent #b2de34;
+  position: absolute;
+  right: -30px;
+  top: 0px;
+  z-index: 2;
+}
+
+//书签
+.app-home {
+  min-height: 10vh;
+  padding-bottom: 40px;
+}
+.app-home .app-home-list {
+  width: calc(100% - 292px);
+}
+.app-home .app-home-list-item {
+  position: relative;
+  border: 1px solid #ebedf0;
+  padding: 16px 24px;
+  margin-bottom: 10px;
+  transition: all 0.2s linear;
+}
+.app-home .app-home-list-item:hover {
+  background: #effbff;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.1);
+  transform: translate3d(0, -5px 0);
+}
+.app-home .app-home-list-item .title {
+  color: #394d69;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.2;
+  cursor: pointer;
+}
+.app-home .app-home-list-item .title:hover {
+  color: #48b2ff;
+}
+.app-home .app-home-list-item .posted-time {
+  font-size: 0.5em;
+  padding-left: 20px;
+}
+.app-home .app-home-list-item .content {
+  cursor: pointer;
+  max-height: 260px;
+  overflow: hidden;
+}
+.app-home .app-home-list-item .list-item-others {
+  vertical-align: middle;
+  margin-top: 10px;
+  color: rgba(0, 0, 0, 0.45);
+}
+.app-home .app-home-list-item .list-item-others a {
+  color: inherit;
+}
+.app-home .app-home-list-item .list-item-others .div2:before {
+  /*做一个书签效果*/
+  position: absolute; /*必须*/
+  top: 50px;
+  left: 20px;
+  z-index: 1;
+  height: 0;
+  padding-right: 10px;
+  font-weight: bold;
+  line-height: 0;
+  color: #000;
+  border: 15px solid #ee7600;
+  border-right-color: transparent; /*右边框透明，变成空缺的角*/
+  content: "书签";
+  box-shadow: 0 5px 5px -5px #000;
+}
+.app-home .app-home-list-item .list-item-others .div2:after {
+  /*书签的夹角*/
+  content: "";
+  position: absolute;
+  top: 80px;
+  left: 20px;
+  border: 4px solid #89540c;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+}
+.app-home .preview {
+  position: fixed;
+  width: 260px;
+  top: 90px;
+  right: 20px;
+  list-style-type: circle;
+}
+.app-home .preview .title {
+  color: #394d69;
+  font-size: 22px;
+}
+.app-home .preview li {
+  cursor: pointer;
+  display: block;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: -1px;
+}
+.app-home .preview li a {
+  color: #8590a6;
+  display: block;
+}
+.app-home .preview li:hover {
+  background: #f0f2f5;
+}
+.app-home .preview li:hover a {
+  color: #40a9ff;
+}
+.app-home .app-pagination {
+  margin-right: 292px;
+}
+.app-home .ant-drawer-body {
+  padding: 0;
+  width: 256px;
+  height: 100%;
+}
+.app-home .ant-drawer-body .preview {
+  position: static;
+  margin: 0;
+  margin-top: 10px;
+}
+.app-home .ant-drawer-body .preview li {
+  padding-left: 20px;
+}
+.app-home .ant-drawer-body .preview li a {
+  line-height: 26px;
+}
+.app-home .drawer-btn {
+  position: fixed;
+  width: 41px;
+  height: 41px;
+  top: 20vh;
+  right: 0;
+  cursor: pointer;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+  border-radius: 4px 0 0 4px;
+  text-align: center;
+  line-height: 41px;
+  z-index: 999;
+  background: #fff;
+}
+.app-home .no-data {
+  margin-top: 24%;
+}
+.app-home .no-data .keyword {
+  font-size: 18px;
+  font-weight: bold;
+  color: #f00;
+}
+@media screen and (max-width: 1300px) {
+  .app-home .app-home-list {
+    width: 100%;
+  }
+  .app-home .app-pagination {
+    margin-right: 0;
+  }
+}
+
+
+
+// header
+.header-right{
+  font-size:32px;
+  left:600px;
+}
+
+.login-avatar{
+  width:32px;
+  height: 32px;
+}  
+
+
+.withBorder {
+  border: 5px solid rgba(141, 45, 186, 0.821)!important;
+  padding: 10px;
+}

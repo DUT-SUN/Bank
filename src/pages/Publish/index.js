@@ -8,7 +8,7 @@ import {
   Upload,
   Space,
   Select,
-  message
+  message,
 } from 'antd'
 import { PlusOutlined } from '@ant-design/icons'
 import { Link, useNavigate, useSearchParams } from 'react-router-dom'
@@ -22,7 +22,6 @@ import { http } from '@/utils'
 const { Option } = Select
 const Publish = () => {
   const { channelStore } = useStore()
-
   // 存放上传图片的列表
   const [fileList, setFileList] = useState([])
   // 这个函数的执行分阶段 是从updating到done的过程
@@ -120,12 +119,13 @@ const Publish = () => {
   }, [id, form])
 
   return (
-    <div className="publish">
+    //两个一样都是这个样式
+    <div className="article-contianer">
       <Card
         title={
           <Breadcrumb separator=">">
             <Breadcrumb.Item>
-              <Link to="/home">首页</Link>
+              <Link to="/admin">后台管理</Link>
             </Breadcrumb.Item>
             <Breadcrumb.Item>{id ? '编辑' : '发布'}文章</Breadcrumb.Item>
           </Breadcrumb>
@@ -146,11 +146,11 @@ const Publish = () => {
             <Input placeholder="请输入文章标题" style={{ width: 400 }} />
           </Form.Item>
           <Form.Item
-            label="频道"
+            label="标签"
             name="channel_id"
-            rules={[{ required: true, message: '请选择文章频道' }]}
+            rules={[{ required: true, message: '请选择文章标签' }]}
           >
-            <Select placeholder="请选择文章频道" style={{ width: 400 }}>
+            <Select placeholder="请选择文章标签" style={{ width: 400 }}>
               {channelStore.channelList.map(item => (
                 <Option key={item.id} value={item.id}>{item.name}</Option>
               ))}

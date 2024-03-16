@@ -4,7 +4,8 @@ import React from "react"
 import LoginStore from "./login.Store"
 import UserStore from "./user.Store"
 import ChannelStore from "./channel.Store"
-
+import LogregStore from "./logreg.Store"
+import ExcelStore from "./Execl.store"
 import { configure } from "mobx"
 configure({
   enforceActions: "never",
@@ -16,7 +17,8 @@ class RootStore {
     this.loginStore = new LoginStore()
     this.userStore = new UserStore()
     this.channelStore = new ChannelStore()
-    // ...
+    this.LogregStore= new LogregStore()
+    this.ExcelStore=new ExcelStore()
   }
 }
 

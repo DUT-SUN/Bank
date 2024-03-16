@@ -12,3 +12,13 @@
     height: 146px;
   }
 }
+
+.article-contianer{
+  margin-left: 300.8px;
+  margin-top: 29px;
+  height: calc(100vh - 64px - 42px);
+  overflow: auto;
+  z-index: 99;
+    position: relative;
+
+}
